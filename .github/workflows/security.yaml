@@ -37,6 +37,7 @@ jobs:
         with:
           projectBaseDir: ./
           args: >
+            -Dsonar.projectKey=poc-sonarcloud-digital
             -Dsonar.source=.
             -Dsonar.tests=.
             -Dsonar.exclusions=node_modules
