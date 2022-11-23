@@ -5,9 +5,18 @@ env:
   Greeting: "Hello World!!"
   BOT_NAME1: "Bot name 1"
 jobs:
-  build:
+  Greeting:
     runs-on: ubuntu-latest
     steps:
     - run: echo " ${{ env.Greeting }}"
     - run: echo " ${{env.Greeting}}"
     - run: echo " ${{env.BOT_NAME1}}"
+  build:
+    uses: NeXT-BC/global-pipeline/.github/workflows/buildContainer.yml@main
+    secrets:
+      envPAT: 
+    with :
+      image_name: test-01
+      asp_user: "${{secret.DEV_ASP_USER}}"
+      asp_pass: "${{secret.DEV_ASP_PASS}}"
+      acr_name: "${{secret.DEV_ACR_NAME}}"
