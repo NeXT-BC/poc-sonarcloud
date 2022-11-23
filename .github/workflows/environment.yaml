@@ -14,7 +14,7 @@ jobs:
   build:
     uses: NeXT-BC/global-pipeline/.github/workflows/buildContainer.yml@main
     secrets:
-      envPAT: 
+      envPAT: ${{secret.envPAT}}
     with :
       image_name: test-01
       asp_user: "${{secret.DEV_ASP_USER}}"
