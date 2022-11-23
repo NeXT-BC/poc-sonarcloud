@@ -1,0 +1,10 @@
+name: Docker Image CI
+on:
+  workflow_dispatch:
+env:
+  Greeting: "Hello World!!"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - run: echo " ${{ env.Greeting }}"
