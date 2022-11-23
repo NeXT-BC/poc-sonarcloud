@@ -3,9 +3,11 @@ on:
   workflow_dispatch:
 env:
   Greeting: "Hello World!!"
+  BOT_NAME1: "Bot name 1"
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - run: echo " ${{ env.Greeting }}"
     - run: echo " ${{env.Greeting}}"
+    - run: echo " ${{env.BOT_NAME1}}"
