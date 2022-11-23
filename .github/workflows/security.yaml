@@ -37,10 +37,7 @@ jobs:
         with:
           projectBaseDir: ./
           args: >
-            -Dsonar.projectKey=poc-sonarcloud-digital
-            -Dsonar.source=.
-            -Dsonar.tests=.
-            -Dsonar.exclusions=node_modules
+            -Dproject.settings=./sonar-project.properties
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
