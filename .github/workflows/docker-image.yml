@@ -27,6 +27,6 @@ jobs:
       - name: 8
         run: echo ${{ fromJSON(VARS.JSON_2) }}
       - name: 9
-        run: echo ${{ VARS }}
-      - name: 10
-        run: echo ${{ toJSON(VARS) }}
+        run: echo ${{ VARS.TEST_JSON.test }}
+      # - name: 10
+      #   run: echo ${{ toJSON(VARS) }}
