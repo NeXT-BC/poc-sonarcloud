@@ -19,4 +19,4 @@ jobs:
       - run: echo ${{ toJSON(VARS.JSON_2) }}
       - run: echo ${{ fromJSON(VARS.JSON_2) }}
       - run: echo ${{ VARS }}
-      - run: echo ${{ fromJSON(VARS) }}
+      - run: echo ${{ toJSON(VARS) }}
