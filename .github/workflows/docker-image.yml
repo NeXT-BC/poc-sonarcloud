@@ -5,6 +5,9 @@ on:
 
 jobs:
   build:
+    env:
+      is_null: "IS NULL"
+      not_is_null: "NOT IS NULL"
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ VARS.TEST == null && 'IS NULL' || 'IS NOT NULL' }}
+      - run: echo ${{ VARS.TEST == null && ${{ env.is_null }} || ${{ env.not_is_null }} }}
