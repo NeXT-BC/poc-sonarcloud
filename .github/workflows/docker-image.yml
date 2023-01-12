@@ -11,4 +11,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo ${{ VARS.TEST == null && env.is_null ||  env.not_is_null }}
-      - run: echo ${{ toJSON(VARS.TEST_JSON).test }}
+      - run: echo ${{ fromJSON(VARS.TEST_JSON).test }}
