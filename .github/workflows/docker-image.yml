@@ -10,4 +10,4 @@ jobs:
       not_is_null: "NOT IS NULL"
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ VARS.TEST == null && ${{ env.is_null }} || ${{ env.not_is_null }} }}
+      - run: echo ${{ VARS.TEST == null && env.is_null ||  env.not_is_null }}
