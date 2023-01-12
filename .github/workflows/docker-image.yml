@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Temp Workflow
 
 on:
   workflow_dispatch:
@@ -7,6 +7,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      - run: ${{ VARS.TEST == null && "IS NULL" || "IS NOT NULL" }}
