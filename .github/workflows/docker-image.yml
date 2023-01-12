@@ -7,4 +7,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: ${{ VARS.TEST == null && "IS NULL" || "IS NOT NULL" }}
+      - run: ${{ VARS.TEST == null && 'IS NULL' || 'IS NOT NULL' }}
